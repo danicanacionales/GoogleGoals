@@ -8,9 +8,19 @@ One of the things on my impossible list is to work at Google as a Software Engin
 
 Algorithmic complexity describes the efficiency, or how fast or slow a particular algorithm performs. This analyzes how fast a program's run time grows asymptotically. 
 
+
+
 ### Best Case, Worst Case and Expected Case
 
+We measure the run time of an algorithm by counting the number of steps it takes to complete an operation. [*](http://www3.cs.stonybrook.edu/~algorith/video-lectures/2007/lecture2.pdf)
 
+**Worst Case Complexity** of an algorithm is the function defined by the **maximum** number of steps taken on any instance size *n*
+
+**Best Case Complexity** of an algorithm is the function defined by the **minimum** number of steps
+
+**Average Case Complexity** of an algorithm is the function defined by the **average** number of steps
+
+Since it is hard to measure the exact complexity of an algorithm, *upper and lower bounds* of a function is used. This is called the Asymptotic Notations.
 
 ### Asymptotic Notations
 
