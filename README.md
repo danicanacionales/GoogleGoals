@@ -8,7 +8,15 @@ One of the things on my impossible list is to work at Google as a Software Engin
 
 Algorithmic complexity describes the efficiency, or how fast or slow a particular algorithm performs. This analyzes how fast a program's run time grows asymptotically. 
 
+To give you an idea of what we are measuring, imagine a data transfer through electronic transfer and airplane transfer. [*](https://www.youtube.com/watch?v=v4cd1O4zkGw) 
 
+**Electronic Transfer O(n)** would depend on how large the data, represented by *n*,is.  The larger the size n is, the longer it would take for the data to transfer.
+
+Let's say that the data is stored in a physical storage device and **transferred by plane**, it would take the same time to transfer it no matter how large the data is on the device. This means that the transfer is constant O(1).
+
+![Figure 1](C:\Users\panda\Documents\GitHub\googlegoals\images\01.png)
+
+where x is size and y is time
 
 ### Best Case, Worst Case and Expected Case
 
@@ -39,6 +47,28 @@ Big omega is the inverse of big O. This denotes the fastest possible running tim
 **Big θ** - Tight bound on run time
 
 A function is bit theta of another if and only if that function is both Big O and Big Omega of it. 
+
+### How to Calculate Big O
+
+For example, we have an array of elements [*](https://stackoverflow.com/a/3368)
+
+`int array[n];`
+
+And we want to access the first element from this array. This would take constant time O(1) since no matter how big the array is, it always takes the same constant time to get the first item.
+
+`x = array[0];`
+
+Now, for example, we want to display all the numbers in the given array:
+
+```java
+for(int i = 0; i < n; i++){
+    System.out.println(n);
+}
+```
+
+The time it takes to display all the elements on the array would depend on the number of elements. This means that if an array has ten elements, it would take O(n = 10) or O(n).
+
+
 
 
 
