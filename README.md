@@ -1,5 +1,8 @@
 # Google Goals
-One of the things on my impossible list is to work at Google as a Software Engineer. And of course, in order to achieve this goal, I have to improve my skill set. I found a Google Interview study plan on [Github](https://github.com/xiewenya/google-interview-university) and I'll be following this to start off my review.
+One of the things on my impossible list is to work at Google as a Software Engineer. And of course, in order to achieve this goal, I have to improve my skill set. I found a Google Interview study plan on [Github](https://github.com/xiewenya/google-interview-university) and I'll be following this to start off my review. 
+
+These review notes are compiled from various sources which will be indicated with asterisk marks (*). Some explanations may come from my personal understanding so, if any information is incorrect, please do let me know!
+
 # Algorithmic complexity
 
 > Algorithmic complexity is concerned about how fast or slow particular algorithm performs.
@@ -62,14 +65,59 @@ Now, for example, we want to display all the numbers in the given array:
 
 ```java
 for(int i = 0; i < n; i++){
-    System.out.println(n);
+    System.out.println(array[i]);
 }
 ```
 
 The time it takes to display all the elements on the array would depend on the number of elements. This means that if an array has ten elements, it would take O(n = 10) or O(n).
 
+#### Basic Rules
+
+**Multi-part Algorithms**
+
+When dealing with multiple loops, it is easy to confuse whether to multiply or add the runtimes of these loops.
+
+When your algorithm is in forms of "do this *and then* do that", you **add the run times.** The following algorithm shows that the run time is O(A + B). Adding the run time for array A and array B.
+
+```java
+for(int i = 0; i < sizeA; i++){
+	System.out.println(arrayA[i]);
+}
+for(int i = 0; i < sizeB; i++){
+	System.out.println(arrayB[i]);
+}
+```
+
+However, if your algorithm is in forms of "do this *for each* time you do that", you **multiply the runtimes.** The following algorithm shows that, for every element in array A, you must also get the value of each element of B. This results to a runtime of O(A * B). 
+
+```java
+for(int i = 0; i < sizeA; i++){
+    for(int j = 0; j < sizeB; j++){
+		System.out.println(arrayA[i] + ", " + arrayB[j]);
+    }
+}
+```
+
+**Drop the Constants**
+
+Some other rules show that constants in runtimes must be omitted. This is because multiplying a function by a constant only influences its growth rate by a constant amount, so linear functions still grow linearly, logarithmic functions still grow logarithmically, exponential functions still grow exponentially and so on. [*](https://stackoverflow.com/a/22188943)
+
+The following code shows O(2N) runtime but given the rule to drop the constants, O(N) is the actual runtime.
+
+```java
+for(int i = 0; i < n; i++){
+    for (int j = 0; j < n; j++){
+        System.out.println(i + " " + j);
+    }
+}
+```
+
+**Drop the Non-Dominant Terms**
 
 
 
+
+
+--
 
 Suppose you are to count how many characters there are in the string "cat". The simplest way is by going through letter by letter and adding one to the counter for each character. This method is said to run in **linear time** with respect to the number of characters. For the string "cat", number of characters *n* = 3. It will take O(n) or O(3) which means that the time required to traverse the string is proportional to the number of characters. [*](https://www.youtube.com/watch?v=iOq5kSKqeR4)
