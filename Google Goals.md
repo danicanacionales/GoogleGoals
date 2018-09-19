@@ -130,7 +130,6 @@ As mentioned earlier, when getting the Big O notation of an algorithm, we are co
 	* Growth doubles with each addition to the input
 	* Usually found in tree like structures
 	* Trees: O(2^n) represents O(branches ^ tree-depth)
-
 —
 
 Suppose you are to count how many characters there are in the string “cat”. The simplest way is by going through letter by letter and adding one to the counter for each character. This method is said to run in **linear time** with respect to the number of characters. For the string "cat", number of characters _n_ = 3. It will take O(n) or O(3) which means that the time required to traverse the string is proportional to the number of characters. [*](https://www.youtube.com/watch?v=iOq5kSKqeR4)
