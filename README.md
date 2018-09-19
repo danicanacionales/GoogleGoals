@@ -144,5 +144,30 @@ Data Structures provides an effective way of organizing data in order for you to
 ### Arrays
 > Array is a container object that holds a fixed number of values of a single type. [*](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)  
 
+[ ] Practice coding using arrays and pointers
 
+**Pointer variable** - stores a memory address
+
+An asterisk mark (`*`) before the name indicates that the variable is a pointer variable.
+
+Declaring a pointer:		`type *ptr;` 	example:   `int *ptr;`
+ 
+To initialize a pointer variable, the ampersand sign (`&`) is used to get the address of its operand. This is called the **Address-of operator**, a unary operator that returns the address of its operand.
+
+Initialize a pointer:
+```
+int x = 10;	//initialize a variable
+int *ptr;		//declare a pointer variable
+p = &x; 		// get the address of x and assign it to p
+```
+
+Since a pointer stores the memory address of a certain variable/object, it can be used to directly access the value of the object it is pointing. **Deferencing operator** used as unary operator, `*` refers to object to which its operand points.
+
+```
+//continuing the code above
+
+cout << *p << endl; //prints the value stored in the memory location pointed by p
+
+//output: 10
+```
 
