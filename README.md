@@ -1,4 +1,5 @@
-# Google Goals
+# 00 Google Goals
+#googlegoals
 One of the things on my impossible list is to work at Google as a Software Engineer. And of course, in order to achieve this goal, I have to improve my skill set. I found a Google Interview study plan on [Github](https://github.com/xiewenya/google-interview-university) and I'll be following this to start off my review.
 
 These review notes are compiled from various sources which will be indicated with asterisk marks (*). The main companion I am using is the [Cracking the Coding Interview](http://www.crackingthecodinginterview.com) book by Gayle Laakmann McDowell and other sources over the internet. I do not take credit to any of their work. Some explanations may come from my personal understanding so, if any information is incorrect, please do let me know!
@@ -144,13 +145,12 @@ Data Structures provides an effective way of organizing data in order for you to
 ### Arrays
 > Array is a container object that holds a fixed number of values of a single type. [*](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)  
 
-[ ] Practice coding using arrays and pointers
-
 **Pointer variable** - stores a memory address
 
 An asterisk mark (`*`) before the name indicates that the variable is a pointer variable.
 
-Declaring a pointer:		`type *ptr;` 	example:   `int *ptr;`
+Declaring a pointer:		`type *ptr;` 	
+Example:   `int *ptr;`
  
 To initialize a pointer variable, the ampersand sign (`&`) is used to get the address of its operand. This is called the **Address-of operator**, a unary operator that returns the address of its operand.
 
@@ -171,3 +171,19 @@ cout << *p << endl; //prints the value stored in the memory location pointed by 
 //output: 10
 ```
 
+**Importance of Pointers** [*](https://graphics.ethz.ch/~chschuma/info1_13/exercise7_slides.pdf)
+	* Allocating memory during runtime
+	One example is if you want to declare an array, but decide on the 	size of the array while the program is running. 
+	* Passing pointers as function arguments
+	This allows the function to change the value outside the scope of the function	
+
+**Pointers and Arrays** [*](https://graphics.ethz.ch/~chschuma/info1_13/exercise7_slides.pdf)
+Arrays are internally represented by pointers. 
+```
+int myArray[5] = { 1, 2, 3, 4, 5 };
+int *pArray = &myArray[0];
+
+```
+
+[ ] Practice coding using arrays and pointers
+Exercise 1 [*](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf)
