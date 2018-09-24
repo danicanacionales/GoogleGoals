@@ -181,9 +181,46 @@ cout << *p << endl; //prints the value stored in the memory location pointed by 
 Arrays are internally represented by pointers. 
 ```
 int myArray[5] = { 1, 2, 3, 4, 5 };
-int *pArray = &myArray[0];
+int *pArray = &myArray[0];	//first statement
+pArray = myArray;				//second statement
+```
+
+The first and second statement would actually have the same values. It would both point to the address of the first element. Now, pointers can also be used to access the other elements in the array.
+
+This can be used by adding the array type’s byte size to the pointer. You may look at the example below.
 
 ```
+int myArray[5] = { 11, 12, 13, 14, 15 };
+int *pArray = &myArray[0];
+	
+for(int i = 0; i < 5; i++){
+	pArray = myArray + i;
+	cout << (pArray) << "'s value: " << *pArray << endl;
+}
+
+// Output: 
+// 0x7fffba804100's value: 11
+// 0x7fffba804104's value: 12
+// 0x7fffba804108's value: 13
+// 0x7fffba80410c's value: 14
+// 0x7fffba804110's value: 15
+```
+
+In this example, we can see that the for loop is iterating through the array. For every iteration, we can see that we are incrementing by one and adding it to the address _myArray_. This is done so that in every iteration, it would assign the pointer to the next element in an array. It is incremented by one because integers has the byte size of one.
+
+**Array Size**
+In C++, we make use of the `sizeof()` function, which returns the size of an object, in order to get the size of an array.
+
+```
+int myArray[5]= { 11, 12, 13, 14, 15 };
+cout << sizeof(myArray[0]);
+cout << sizeof(myArray);
+cout << (sizeof(myArray)/sizeof(*myArray));
+```
+
+The first output statement returns the byte size of the first element, an integer, which is 4 bytes.
+The second output statement returns the byte size of the entire array which contains five integers, then the result would be 20.
+The third statement would return the number of elements inside the array. This is done by dividing the total byte size of the array by the byte size of one element. 20 bytes / 4 bytes = 5.
 
 [ ] Practice coding using arrays and pointers
 Exercise 1 [*](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf)
