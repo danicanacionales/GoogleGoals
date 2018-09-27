@@ -222,5 +222,12 @@ The first output statement returns the byte size of the first element, an intege
 The second output statement returns the byte size of the entire array which contains five integers, then the result would be 20.
 The third statement would return the number of elements inside the array. This is done by dividing the total byte size of the array by the byte size of one element. 20 bytes / 4 bytes = 5.
 
+**Vector**
+> sequence of containers representing arrays that can change in size.  
+
+Vectors is basically an array which can store a dynamic number of elements. Using arrays however, you can only store a fixed number of elements. 
+
+How do vectors work? In order for a vector (dynamic array) to have a dynamic size, it may internally reallocate in order to grow in size when new elements are inserted. This means that it allocates a new array and moving all elements to it. [*](http://www.cplusplus.com/reference/vector/vector/) 
+
 [ ] Practice coding using arrays and pointers
 Exercise 1 [*](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf)
