@@ -1,6 +1,7 @@
-# Exercises
-### Pointers
+# 01 Pointer Exercises
+#googlegoals
 
+### Pointers
 [01](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf)- Find out (add code to print out) the address of the variable x in foo1, and the variable y in foo2. What do you notice? Can you explain this?
 
 ```
@@ -27,7 +28,7 @@ int main() {
 
 [02](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf) - The program below uses pointer arithmetic to determine the size of a 'char' variable. By using pointer arithmetic we can find out the value of 'cp' and the value of 'cp+1'. Since cp is a pointer, this addition involves pointer arithmetic: adding one to a pointer makes the pointer point to the next element of the same type.
 For a pointer to a char, adding 1 really just means adding 1 to the address,
- but this is only because each char is 1 byte.
+but this is only because each char is 1 byte.
 1. Compile and run the program and see what it does.
 2. Write some code that does pointer arithmetic with a pointer to an int and determine how big an int is.
 3. Same idea – figure out how big a double is, by using pointer arithmetic and printing out the value of the pointer before and after adding 1.
@@ -69,4 +70,33 @@ int main()
     
     return 0;
 }
+```
+
+```
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	vector<int> myvector;
+	
+	cout << "empty(): " << myvector.empty() << endl;
+	myvector.push_back(2);
+	myvector.push_back(5);
+	
+	vector<int>::iterator it;
+	it = myvector.begin() + 1;
+	it = myvector.insert(it,3);
+	
+	
+	for(int i = 0; i < myvector.size(); i++){
+	    cout << myvector.at(i) << " ";
+	}
+	
+	cout << "\nis_empty(): " << myvector.empty() << endl;
+
+	return 0;
+}
+
 ```
