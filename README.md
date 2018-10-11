@@ -231,3 +231,23 @@ How do vectors work? In order for a vector (dynamic array) to have a dynamic siz
 
 [ ] Practice coding using arrays and pointers
 Exercise 1 [*](http://www.csc.villanova.edu/~mdamian/Past/csc2400fa13/assign/plab.pdf)
+
+### Linked List
+A linked list is a linear data structure, in which the elements are stored as separate objects. Each element in a linked list _links_ or points to its next element in the sequence. 
+
+**Main Components**
+The main components of a linked list are the head and the node. 
+
+The head is a pointer that points to the first element of the list. 
+
+While the nodes, which can be a class, a struct or something similar, contains a key and a next pointer. The key contains the actual value being stored and the next pointer stores or points to the next element in the list.
+![](README/EA79054E-41A3-48EC-A165-3A844B7368BD.png)
+
+**Array vs. Linked List**
+Arrays are stored next to each other in sequence.
+![](README/158460ED-9D88-4B64-A321-3996E455AA9A.png)
+However, for a linked list, each variable is stored in its own memory. Not necessarily next to each other. With the help of the next pointer stored in the node, it can point to the element next to the other.
+![](README/E5A2DA7B-0C71-419E-B9C4-E88CD0E70A23.png)
+
+**Usages of Linked List**
+One of the 
