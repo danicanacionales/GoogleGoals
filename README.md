@@ -113,7 +113,7 @@ for(int i = 0; i < n; i++){
 As mentioned earlier, when getting the Big O notation of an algorithm, we are concerned about the upper bound of the time. Hence, when we encounter cases such as O(N + log N), we omit log N because it grows more slowly than N. See Order of Growth to see comparisons of each notation.
 
 ### Order of Growth
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 
 **Constant O(1)**
 	* Computes in constant time
@@ -241,13 +241,50 @@ The main components of a linked list are the head and the node.
 The head is a pointer that points to the first element of the list. 
 
 While the nodes, which can be a class, a struct or something similar, contains a key and a next pointer. The key contains the actual value being stored and the next pointer stores or points to the next element in the list.
-![](README/EA79054E-41A3-48EC-A165-3A844B7368BD.png)
+![linked list node](https://github.com/danicanacionales/googlegoals/blob/master/images/03%20linked%20list%20node.png?raw=true)
+
+One way we can do this in code is by creating a class Node
+```
+class Node {
+	string value;
+	string *next;
+}
+```
 
 **Array vs. Linked List**
 Arrays are stored next to each other in sequence.
-![](README/158460ED-9D88-4B64-A321-3996E455AA9A.png)
+![array](https://github.com/danicanacionales/googlegoals/blob/master/images/04%20array.png?raw=true)
 However, for a linked list, each variable is stored in its own memory. Not necessarily next to each other. With the help of the next pointer stored in the node, it can point to the element next to the other.
-![](README/E5A2DA7B-0C71-419E-B9C4-E88CD0E70A23.png)
+![linked list](https://github.com/danicanacionales/googlegoals/blob/master/images/05%20linked%20list.png?raw=true)
 
-**Usages of Linked List**
-One of the 
+**Advantages of Linked Lists**
+Main advantage of using linked list is the efficient insertion and deletion from the list. For instance, we want to insert Y after the element B.
+
+Given the array illustrated above, in order for us to insert an element, we have to:
+	1. Resize the array. This can be done by declaring a new array with larger size
+	2. Copy the elements to the new array. We must keep in mind to leave the index you want to insert on empty.
+	3. Insert the new element.
+
+For a linked list, here are the general steps to insert an element.
+	1. Create a new node with its value. For its next pointer, we will have to get the current next pointer of the element you want to succeed the new element with. 
+	For this example, we create a new node with element Y, and getting 	the next pointer of element B and assign it to element Y.
+	2. Point the preceding node to the new node by changing its next pointer to the address of the new node.
+![linked list insertion](https://github.com/danicanacionales/googlegoals/blob/master/images/06%20linked%20list%20insertion.png?raw=true)
+
+**Functions**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
