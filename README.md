@@ -246,8 +246,9 @@ While the nodes, which can be a class, a struct or something similar, contains a
 One way we can do this in code is by creating a class Node
 ```
 class Node {
-	string value;
-	string *next;
+	public:
+		string value;
+		Node next;
 }
 ```
 
@@ -266,18 +267,39 @@ Given the array illustrated above, in order for us to insert an element, we have
 	3. Insert the new element.
 
 For a linked list, here are the general steps to insert an element.
-	1. Create a new node with its value. For its next pointer, we will have to get the current next pointer of the element you want to succeed the new element with. 
+	1. Create a new node with its value.  We then store the reference of the succeeding node in order for us to determine which element is next.
 	For this example, we create a new node with element Y, and getting 	the next pointer of element B and assign it to element Y.
 	2. Point the preceding node to the new node by changing its next pointer to the address of the new node.
 ![linked list insertion](https://github.com/danicanacionales/googlegoals/blob/master/images/06%20linked%20list%20insertion.png?raw=true)
 
 **Functions**
+push_back(value) - adds an item at the end
+```
+
+```
 
 
+### Stack
+> Data structure that can be logically thought of as a linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. [*](https://en.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Stacks)  
 
+The basic idea of a stack is a stack of books where you can only take the top item off the stack in order to remove things from it.
 
+The basic implementation of a stack is also called as a LIFO or Last In First Out.
 
+The basic functions for a stack are:
+	* push() - This will insert the item on top of the stack.
+	* pop() - This will remove the topmost item from the stack.
 
+###  Queues
+> Container of objects that are inserted and removed according to the first-in first-out (FIFO) principle. [*](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html)  
+
+The most basic example of queues is a line of customers in a fast food restaurant. The first customer will be the first one to order and be served and removed from the queue while the next customers will have to line up behind them.
+
+The basic functions for a queue are:
+	* enqueue - insert an item into the back of the queue
+	* dequeue - remove the front item
+
+### Hash Table
 
 
 
