@@ -15,6 +15,6 @@ You can check the topics on my [WordPress blog](https://danicanacionales.wordpre
  8. [Trees](https://danicanacionales.wordpress.com/2019/02/02/08-trees/)
  9. [Binary Heap](https://danicanacionales.wordpress.com/2019/02/06/09-binary-heap/)
 
- A. [OOP Terminologies](https://danicanacionales.wordpress.com/2019/03/30/a-oop-terminologies/)
- B. [Maven](https://danicanacionales.wordpress.com/2019/03/31/b-maven/)
+ A. [OOP Terminologies](https://danicanacionales.wordpress.com/2019/03/30/a-oop-terminologies/) <br/>
+ B. [Maven](https://danicanacionales.wordpress.com/2019/03/31/b-maven/) <br/>
  C. [Git](https://danicanacionales.wordpress.com/2019/04/01/c-git/)
